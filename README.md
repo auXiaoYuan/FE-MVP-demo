@@ -54,10 +54,10 @@ cd frontend && npm install && npm run dev
 ### 桌面模式（Tauri）
 
 ```bash
-cd frontend
-npm install
-npm run tauri dev        # 开发模式
-npm run tauri build      # 构建桌面产物
+cd frontend && npm install   # 安装前端依赖（首次）
+cd ..                        # 回到仓库根目录
+npm run tauri dev            # 开发模式（自动启动 Vite + 打开桌面窗口）
+npm run tauri build          # 构建发布产物（安装包 / 免安装可执行文件）
 ```
 
 > 详细步骤与各平台前置要求见 [docs/BUILD.md](docs/BUILD.md)。

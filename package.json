@@ -1,0 +1,12 @@
+{
+  "name": "muyu-demo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "敲木鱼桌面应用 MVP（根目录便捷脚本，tauri CLI 需在仓库根目录运行）",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "node frontend/node_modules/@tauri-apps/cli/tauri.js build",
+    "tauri": "node frontend/node_modules/@tauri-apps/cli/tauri.js",
+    "gen:icon": "node scripts/gen-icon.mjs"
+  }
+}

@@ -13,7 +13,7 @@ echo "==> [1/2] 安装前端依赖"
 (cd frontend && npm install)
 
 echo "==> [2/2] 构建 Tauri 桌面应用"
-(cd frontend && npm run tauri build)
+node frontend/node_modules/@tauri-apps/cli/tauri.js build
 
 echo ""
 echo "构建完成！产物位于 src-tauri/target/release/bundle/"

@@ -58,13 +58,15 @@ npm run build                 # 产物输出到 frontend/dist
 ### 3.3 桌面应用（Tauri，Windows / macOS 通用）
 
 ```bash
-cd frontend
-npm run tauri dev             # 开发模式（会先启动 Vite 再打开桌面窗口）
+# 在仓库根目录（FE-MVP-demo/）执行：
+npm run tauri dev             # 开发模式（自动启动 Vite 再打开桌面窗口）
 npm run tauri build           # 构建发布产物
 ```
 
-`tauri build` 会自动完成：前端构建（`tsc + vite build`）→ 后端编译（cargo，含内嵌服务）
-→ 打包（Windows: NSIS；macOS: .app + .dmg）。
+> 说明：tauri CLI 要求当前目录能定位到 `src-tauri/`，因此必须在**仓库根目录**运行
+> （根目录 `package.json` 已配置便捷脚本，无需单独安装根依赖）。
+> `tauri build` 会自动完成：前端构建（`tsc + vite build`）→ 后端编译（cargo，含内嵌服务）
+> → 打包（Windows: NSIS；macOS: .app + .dmg）。
 
 ### 3.4 应用图标（首次或修改图标后）
 

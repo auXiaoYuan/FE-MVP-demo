@@ -16,7 +16,7 @@ if ($LASTEXITCODE -ne 0) { throw "npm install 失败" }
 Pop-Location
 
 Write-Host "==> [2/3] 构建 Tauri 桌面应用（含前端构建 + 后端编译）"
-npm --prefix frontend run tauri build
+node frontend/node_modules/@tauri-apps/cli/tauri.js build
 if ($LASTEXITCODE -ne 0) { throw "tauri build 失败" }
 
 Write-Host "==> [3/3] 复制产物到 release/"
