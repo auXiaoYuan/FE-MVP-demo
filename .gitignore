@@ -1,0 +1,18 @@
+# Node
+node_modules/
+dist/
+*.local
+
+# Rust / Tauri
+target/
+src-tauri/gen/
+
+# 运行时数据
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# 系统
+.DS_Store
+Thumbs.db
