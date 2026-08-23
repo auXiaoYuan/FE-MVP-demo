@@ -1,0 +1,22 @@
+[package]
+name = "muyu-backend"
+version = "0.1.0"
+edition = "2021"
+description = "敲木鱼应用后端服务：极简 HTTP API + SQLite"
+
+[lib]
+name = "muyu_backend"
+path = "src/lib.rs"
+
+[[bin]]
+name = "muyu-backend"
+path = "src/main.rs"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rand = "0.8"
+tower-http = { version = "0.5", features = ["cors"] }
